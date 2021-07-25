@@ -2,16 +2,15 @@ html body {
   margin: 0%;
 }
 
-header {
+.header {
   background-color: #fffaf0;
   margin: 0%;
   height: 100%;
-}
-header .globalnavi {
   border-top: 1px solid black;
   border-bottom: 1px solid black;
 }
-header .globalnavi ul {
+
+.menu {
   width: 1200px;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -23,7 +22,7 @@ header .globalnavi ul {
           justify-content: center;
   margin: 0% auto;
 }
-header .globalnavi ul li {
+.menu__list {
   padding: 15px 0;
   list-style: none;
   -webkit-box-flex: 1;
@@ -33,34 +32,35 @@ header .globalnavi ul li {
   border-right: 1px solid black;
   text-align: center;
 }
-header .globalnavi ul li a {
+.menu__list:first-child {
+  border-left: 1px solid black;
+}
+.menu__list:hover {
+  background-image: -webkit-gradient(linear, left top, left bottom, from(#fffaf0), color-stop(80%), to(#d4d0c7));
+  background-image: linear-gradient(to bottom, #fffaf0, 80%, #d4d0c7);
+}
+.menu__link {
   font-size: 20px;
   text-decoration: none;
   color: black;
   text-align: center;
 }
-header .globalnavi ul li:first-child {
-  border-left: 1px solid black;
-}
-header .globalnavi ul li:hover {
-  background-image: -webkit-gradient(linear, left top, left bottom, from(#fffaf0), color-stop(80%), to(#d4d0c7));
-  background-image: linear-gradient(to bottom, #fffaf0, 80%, #d4d0c7);
-}
 
-#pagebody {
+.pagebody {
   background-color: #ead9ff;
 }
-#pagebody p {
+.pagebody p {
   line-height: 1.5;
 }
-#pagebody .topimage {
+
+.topimage {
   position: relative;
 }
-#pagebody .topimage img {
+.topimage__image {
   width: 100%;
   margin: 0%;
 }
-#pagebody .topimage .topimgtext {
+.topimage .toptext {
   width: 650px;
   color: white;
   position: absolute;
@@ -70,48 +70,48 @@ header .globalnavi ul li:hover {
   color: #ffffff;
   text-shadow: 2px 2px 10px #777, -2px 2px 10px #777, 2px -2px 10px #777, -2px -2px 10px #777;
 }
-#pagebody .topimage .topimgtext h2 {
+.topimage .toptext__h2 {
   width: 550px;
   font-size: 45px;
   margin-bottom: 20px;
   letter-spacing: 5px;
 }
-#pagebody .topimage .topimgtext p {
+.topimage .toptext__p {
   width: 550px;
   font-size: 20px;
   letter-spacing: 5px;
   border-top: 3px solid white;
   padding-top: 5px;
 }
-#pagebody .description {
-  background-color: #ead9ff;
+
+.description {
   position: relative;
 }
-#pagebody .description :not(h1, strong) {
+.description :not(.description__h1, strong) {
   display: inline-block;
 }
-#pagebody .description h1 {
+.description__h1 {
   font-size: 60px;
   margin-left: 70px;
 }
-#pagebody .description p {
+.description__p {
   font-size: 30px;
   width: 600px;
   margin-left: 70px;
   font-weight: 300;
   vertical-align: top;
 }
-#pagebody .description p strong {
+.description__p strong {
   color: #cc33ff;
   vertical-align: top;
 }
-#pagebody .description .table img {
+.description .table__center {
   position: absolute;
   width: 330px;
   right: 220px;
   top: 280px;
 }
-#pagebody .description .table .red {
+.description .table .red {
   position: absolute;
   font-size: 25px;
   color: white;
@@ -125,7 +125,7 @@ header .globalnavi ul li:hover {
   top: 284px;
   background-color: #ff4f4f;
 }
-#pagebody .description .table .green {
+.description .table .green {
   position: absolute;
   font-size: 24px;
   color: white;
@@ -139,7 +139,7 @@ header .globalnavi ul li:hover {
   top: 468px;
   background-color: green;
 }
-#pagebody .description .table .blue {
+.description .table .blue {
   position: absolute;
   font-size: 25px;
   color: white;
@@ -153,81 +153,72 @@ header .globalnavi ul li:hover {
   right: 431px;
   background-color: blue;
 }
-#pagebody .content .service {
+
+.service {
   background-color: #fffaf0;
 }
-#pagebody .content .service h2 {
-  color: #979797;
-  font-size: 70px;
-  text-align: center;
-  margin-bottom: -10%;
-  padding-bottom: 0%;
-  padding-top: 24px;
+.service__inner {
+  margin: 0%;
 }
-#pagebody .content .service .slider img {
+.service__p {
+  text-align: center;
+}
+
+.plan {
+  text-align: center;
+  padding-bottom: 50px;
+}
+.plan :not(.plan__p) {
+  display: inline-block;
+}
+.plan__p {
+  text-align: center;
+  margin-bottom: 40px;
+}
+.plan__box {
+  background-color: #777;
+  width: 250px;
+  height: 200px;
+}
+.plan__box:last-child {
+  margin-left: 100px;
+}
+
+.slider__image {
   width: 1000px;
   height: auto;
   text-align: center;
 }
-#pagebody .content .service p {
-  text-align: center;
-}
-#pagebody .content .service .plan {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding-bottom: 50px;
-}
-#pagebody .content .service .plan .box {
-  background-color: #777;
-  width: 250px;
-  height: 200px;
-  margin-left: 150px;
-}
-#pagebody .content .service .plan .box:first-child {
-  margin-left: 0%;
-}
-#pagebody .content .works {
+
+.works {
   background-color: #fffaf0;
-  margin-bottom: 60px;
 }
-#pagebody .content .works h2 {
-  margin-top: 0%;
-  color: #979797;
-  font-size: 70px;
-  text-align: center;
-  margin-bottom: -12%;
-  padding-bottom: 0%;
-  padding-top: 24px;
-}
-#pagebody .content .works p {
+.works__p {
   text-align: center;
   padding-bottom: 20px;
 }
-#pagebody .content .works .sample {
-  padding-bottom: 70px;
-}
-#pagebody .content .works .sample a {
-  padding-top: 50px;
-}
-#pagebody .content .works .sample a div {
+.works__sample {
   background-color: #777;
   width: 270px;
   height: 90px;
   margin: 50px auto 0px;
 }
-#pagebody .content .contact {
+.works__sample:last-child {
+  margin-bottom: 100px;
+}
+.works__inner {
+  padding-bottom: 20px;
+}
+
+.contact {
   text-align: center;
+  padding: 31px 0;
 }
-#pagebody .content .contact h2 {
-  font-size: 30px;
-  font-weight: 600;
-  margin: 0 0 40px;
+.contact__h2 {
+  font-size: 45px;
+  margin-top: 4px;
 }
-#pagebody .content .contact .button {
+.contact .button {
   font-size: 20px;
   font-weight: bold;
   width: 300px;
@@ -243,7 +234,7 @@ header .globalnavi ul li:hover {
   -webkit-transition: 0.4;
   transition: 0.4;
 }
-#pagebody .content .contact .button:active {
+.contact .button:active {
   -webkit-transform: translateY(1px);
           transform: translateY(1px);
   border-bottom: none;
@@ -252,41 +243,44 @@ header .globalnavi ul li:hover {
   text-shadow: 0px 0px 1px rgba(162, 248, 162, 0.6);
   margin-bottom: 4px;
 }
-#pagebody .content .contact .button a {
+.contact .button a {
   text-decoration: none;
   color: green;
   line-height: 2.5;
 }
-#pagebody .content .member {
+
+.member {
   background-color: #fffaf0;
   padding-bottom: 20px;
+  height: 140px;
 }
-#pagebody .content .member h2 {
-  color: #979797;
-  font-size: 70px;
-  text-align: center;
-  margin-bottom: -9%;
-  padding-bottom: 0%;
-  padding-top: 24px;
+.member__inner {
+  height: 100%;
 }
-#pagebody .content .news {
+
+.news {
   background-color: #fffaf0;
   padding-bottom: 30px;
 }
-#pagebody .content .news h2 {
-  color: #979797;
-  font-size: 70px;
-  text-align: center;
-  margin-bottom: -15%;
-  padding-bottom: 0%;
-  padding-top: 24px;
+.news__inner {
+  height: 100%;
 }
-#pagebody .title {
+
+.title {
   border-bottom: 1px solid #cc33ff;
   width: -webkit-fit-content;
   width: -moz-fit-content;
   width: fit-content;
   margin: 0 auto 35px;
+}
+.title__h2 {
+  color: #979797;
+  font-size: 70px;
+  text-align: center;
+  margin-bottom: -8%;
+  padding-bottom: 0%;
+  padding-top: 24px;
+  margin-top: 0%;
 }
 
 footer .copyright {
@@ -294,7 +288,7 @@ footer .copyright {
   padding: 10px 0 10px 50px;
   margin: 0;
 }
-footer .copyright p {
+footer .copyright__text {
   font-size: small;
   color: #a8a8a8;
   font-weight: 600;
