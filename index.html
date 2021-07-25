@@ -27,121 +27,132 @@
     </script>
     <!-- スライダー補強 -->
     <script>
-          $(window).on('load', function () {
-      $('.slider').bxSlider({
-        onSlideBefore: function () {
-          $('.bx-controls-direction a').css('pointer-events', 'none');
-          $('.bx-pager a').css('pointer-events', 'none');
-        },
-        onSlideAfter: function () {
-          $('.bx-pager a').css('pointer-events', 'auto');
-          $('.bx-controls-direction a').css('pointer-events', 'auto');
-          slider.startAuto();
-        }
+      $(window).on("load", function () {
+        $(".slider").bxSlider({
+          onSlideBefore: function () {
+            $(".bx-controls-direction a").css("pointer-events", "none");
+            $(".bx-pager a").css("pointer-events", "none");
+          },
+          onSlideAfter: function () {
+            $(".bx-pager a").css("pointer-events", "auto");
+            $(".bx-controls-direction a").css("pointer-events", "auto");
+            slider.startAuto();
+          },
+        });
       });
-});
     </script>
   </head>
   <body>
-    <header>
-      <div class="globalnavi">
-        <ul>
-          <li><a href="">box</a></li>
-          <li><a href="">box</a></li>
-          <li><a href="">box</a></li>
-          <li><a href="">box</a></li>
-        </ul>
-      </div>
+    <header class="header">
+      <ul class="menu">
+        <li class="menu__list"><a href="" class="menu__link">box</a></li>
+        <li class="menu__list"><a href="" class="menu__link">box</a></li>
+        <li class="menu__list"><a href="" class="menu__link">box</a></li>
+        <li class="menu__list"><a href="" class="menu__link">box</a></li>
+      </ul>
     </header>
-    <section id="pagebody">
+    <section class="pagebody">
       <div class="topimage">
-        <img src="./images/DSCF1665.jpg" alt="" />
-        <div class="topimgtext">
-          <h2>あなたの未来につながるサイトを作ります</h2>
-          <p>
+        <img src="./images/DSCF1665.jpg" alt="" class="topimage__image" />
+        <div class="toptext">
+          <h2 class="toptext__h2">あなたの未来につながるサイトを作ります</h2>
+          <p class="toptext__p">
             「見せる」「伝える」「広める」ことを意識したサイトをお届けします。<br />理想のデザインをあなたと共に作り上げます。
           </p>
         </div>
       </div>
       <section class="description">
-        <h1>CREATORSはオンラインを拠点とした<br />web制作をしています。</h1>
-        <p>
+        <h1 class="description__h1">
+          CREATORSはオンラインを拠点とした<br />web制作をしています。
+        </h1>
+        <p class="description__p">
           <strong>クリアなデザイン</strong
-          >と<strong>端的な文章</strong>で制作を行っています。<br />
+            >と<strong>端的な文章</strong>で制作を行っています。<br />
           8年以上付き合いのあるメンバーがデザイン、システム、コーディングに分かれてクオリティの高いものを制作します。SEOに適したデザインや文章を実現し、集客に貢献します。公開後のサイトの更新やページの保守をサポートいたします。
         </p>
         <div class="table">
-          <img src="./images/hLK56ME0CjX9Km01626775629_1626775658.png" alt="" />
+          <img
+          src="./images/hLK56ME0CjX9Km01626775629_1626775658.png"
+          alt=""
+          class="table__center"
+          />
           <div class="red">デザイン</div>
           <div class="blue">システム</div>
           <div class="green">コーディング</div>
         </div>
       </section>
-      <section class="content">
-        <div class="service">
+      
+      <div class="service">
+        <div class="service__inner">
+          
           <div class="title">
-            <h2>Service</h2>
+            <h2 class="title__h2">Service</h2>
           </div>
-          <p>
-            ４人のメンバーがデザイン、コーディング、システムの分野に分かれて制作します。
-          </p>
-          <div class="slider">
-            <div><img src="./images/2018-07-16-022654.jpg" alt="" /></div>
-            <div><img src="./images/2018-07-16-030651.jpg" alt="" /></div>
-            <div>
-              <img src="./images/2018-07-16-031912.jpg" alt="" />
+            <p class="service__p">
+              ４人のメンバーがデザイン、コーディング、システムの分野に分かれて制作します。
+            </p>
+            <div class="slider">
+              <div class="slider__image">
+                <img src="./images/2018-07-16-022654.jpg" alt="" />
+              </div>
+              <div class="slider__image">
+                <img src="./images/2018-07-16-030651.jpg" alt="" />
+              </div>
+              <div class="slider__image">
+                <img src="./images/2018-07-16-031912.jpg" alt="" />
+              </div>
             </div>
-          </div>
-          <p>
-            お客様に合わせたプランを提案しております。<br />
-            ホームページ、ブログ制作に加えてウェブ広告の製作はそれぞれいくつかのプランを提供しています。
-          </p>
           <div class="plan">
-            <div class="box">box</div>
-            <div class="box">box</div>
+            <p class="plan__p">
+              お客様に合わせたプランを提案しております。<br />
+              ホームページ、ブログ制作に加えてウェブ広告の製作はそれぞれいくつかのプランを提供しています。
+            </p>
+            <div class="plan__box">box</div>
+            <div class="plan__box">box</div>
           </div>
         </div>
+      </div>
         <div class="works">
-          <div class="title">
-            <h2>works</h2>
-          </div>
-          <p>
-            私たちのweb制作の一部をサンプルとして紹介します。<br />
-            デザイン性、SEO対策に優れた高いカスタマイズ性のある制作を行っています。
-          </p>
-          <div class="sample">
-            <a href="">
-              <div></div>
-            </a>
-            <a href="">
-              <div></div>
-            </a>
+          <div class="works__inner">
+            <div class="title">
+              <h2 class="title__h2">works</h2>
+            </div>
+            <p class="works__p">
+              私たちのweb制作の一部をサンプルとして紹介します。<br />
+              デザイン性、SEO対策に優れた高いカスタマイズ性のある制作を行っています。
+            </p>
+            <div class="works__sample"><a href=""></a></div>
+            <div class="works__sample"><a href=""></a></div>
           </div>
         </div>
         <div class="contact">
-          <h2>
+          <h2 class="contact__h2">
             あなたのイメージを実現するお手伝いをします！<br />
             ご相談はお気軽にしてください
           </h2>
           <div class="button">
-            <a href="">お問い合わせはこちら</a>
+            <div class="button__innner">
+              <a href="">お問い合わせはこちら</a>
+            </div>
           </div>
         </div>
         <div class="member">
-          <div class="title">
-            <h2>member</h2>
+          <div class="member__inner">
+            <div class="title">
+              <h2 class="title__h2">member</h2>
+            </div>
           </div>
         </div>
         <div class="news">
-          <div class="title">
-            <h2>news</h2>
+          <div class="news__inner">
+            <div class="title">
+              <h2 class="title__h2">news</h2>
+            </div>
           </div>
         </div>
-      </section>
-    </section>
     <footer>
       <div class="copyright">
-        <p>&copy; 2021 CREATORS</p>
+        <p class="copyright__text">&copy; 2021 CREATORS</p>
       </div>
     </footer>
   </body>
